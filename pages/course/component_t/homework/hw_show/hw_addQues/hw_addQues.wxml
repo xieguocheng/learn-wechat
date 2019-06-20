@@ -1,0 +1,59 @@
+<view class="section head">
+  <picker bindchange="bindPickerChange" range-key="{{'name'}}" value="{{index}}" range='{{objectArray}}'>
+    <view class="picker">第{{(myindex*1+1)}}题： {{objectArray[index].name}}
+      <text class="trend">﹀</text>
+    </view>
+  </picker>
+</view>
+
+<form bindsubmit="GetSingle" hidden="{{index==0?flase:true}}">
+  <textarea placeholder="问题描述（300字数）" name="textarea" maxlength="300" value="{{form_info}}"></textarea>
+
+  <view class="answer_area">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class="ans_row" wx:for="{{radioArray}}" wx:for-index="idx" >
+        <radio value='{{ans_id[idx]}}' class="item" checked='{{checked}}'>{{ans_id[idx]}}：</radio>
+        <input placeholder='答案描述' name="{{idx}}" value="{{form_info}}"></input>
+      </view>
+
+    </radio-group>
+    <view class="add" catchtap='additem' id="1">+添加选项</view>
+    <view class="del" catchtap='delitem' id="1">-删除选项</view>
+  </view>
+  <button form-type='submit' data-set="0">继续创建下一题</button>
+  <button class="submit" form-type='submit'  data-set="1">完成创建</button>
+</form>
+
+<form bindsubmit="GetSingle" hidden="{{index==1?flase:true}}">
+  <textarea placeholder="问题描述（300字数）" name="textarea" value="{{form_info}}"maxlength="300"></textarea>
+
+  <view class="answer_area">
+    <checkbox-group class="radio-group" bindchange="checkboxChange">
+      <view class="ans_row" wx:for="{{checkboxArray}}" wx:for-index="idx1">
+        <checkbox value='{{ans_id[idx1]}}' class="item" checked='{{checked}}'>{{ans_id[idx1]}}： </checkbox>
+        <input placeholder='答案描述' name="{{idx1}}" value="{{form_info}}"></input>
+      </view>
+    </checkbox-group>
+    <view class="add" catchtap='additem' id="2">+添加选项</view>
+    <view class="del" catchtap='delitem' id="2">-删除选项</view>
+  </view>
+  <button form-type='submit' data-set="0">继续创建下一题</button>
+  <button class="submit" form-type='submit' data-set="1">完成创建</button>
+</form>
+
+<form bindsubmit="GetBlank" hidden="{{index==2?flase:true}}">
+  <textarea placeholder="问题描述（300字数）" name="textarea" value="{{form_info}}" maxlength="300"></textarea>
+  <view class="answer_area">
+    <view>
+      <view class="ans_row" wx:for="{{blankArray}}" wx:for-index="idx2">
+        <text class="item">第{{idx2+1}}空：</text>
+        <input placeholder='答案描述' name="{{idx2}}" value="{{form_info}}"></input>
+      </view>
+    </view>
+    <view class="add" catchtap='additem' id="3">+添加选项</view>
+    <view class="del" catchtap='delitem' id="3">-删除选项</view>
+  </view>
+  <button form-type='submit' data-set="0">继续创建下一题</button>
+  <button class="submit" form-type='submit' data-set="1">完成创建</button>
+</form>
+<view class="footer">※若信息填写不完整点击完成创建，该题将被舍弃</view>

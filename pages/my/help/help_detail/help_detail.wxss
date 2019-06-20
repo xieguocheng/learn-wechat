@@ -1,0 +1,12 @@
+/* pages/my/help/help_detail/help_detail.wxss */
+page{
+  background: #efefef;
+  color: #666;
+  font-size: 28rpx;
+}
+image{
+  width: 80%;
+  margin:30rpx  auto;
+  display: block;
+  height: calc(2800rpx * 0.8);
+}

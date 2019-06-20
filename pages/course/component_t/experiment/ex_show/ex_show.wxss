@@ -1,0 +1,89 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+  padding-bottom: 30rpx;
+}
+.block{
+  background: white;
+  margin-bottom: 30rpx;
+  border-bottom: thin solid #ddd;
+  border-top: thin solid #ddd;
+}
+.block:first-child{
+  border-top: 0;
+}
+.block .head-head{
+  margin: 0 5%;
+  padding: 3% 0;
+  border-bottom: thin solid #efefef;
+}
+.block .head-head .img,.img{
+  width: 75rpx;
+  height: 75rpx;
+  margin-right: 5%;
+
+}
+
+.block .title{
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  
+}
+.block .head-head .desc .score,.score{
+  color: #999;
+ 
+}
+.exscore{
+  padding-right: 5%;
+}
+.block .head-main{
+
+  padding: 3% 5%;
+  line-height: 1.5;
+}
+.block .head-main text{
+   color: #999;
+}
+/*Experiment desc*/
+.block .blockTitle{
+  padding: 3% 5%;
+  border-bottom: thin dashed #efefef;
+}
+.block .experimentDesc{
+  padding: 3% 5% ;
+  color: #999;
+    word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+}/*accessory*/
+.arow-con{
+  display: flex;
+  margin: 0 5%;
+  padding: 3% 0;
+  border-bottom: thin solid #efefef;
+}
+.arow:last-child{
+  border-bottom: 0;
+}
+.arow:active{
+  background: #efefef;
+}
+.engagement_t{
+  color: green;
+
+}
+.engagement_f{
+  color: red;
+}
+.null{
+  color: #999;
+  padding: 3% 5%;
+}
+.wordname{
+  width: 500rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

@@ -1,0 +1,4 @@
+<view id="block"></view>
+<image src="/img/lu.png" id="img"></image>
+<text id="text">子鹿班课</text>
+<button id="login" type='warn' open-type='getUserInfo' bindgetuserinfo='doLogin'>登陆</button>

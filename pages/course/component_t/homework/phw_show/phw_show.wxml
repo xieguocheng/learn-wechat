@@ -1,0 +1,24 @@
+<view class="block">
+  <view class="blockTitle">提交人数：{{stuT.length}}/{{stuT.length+stuF.length}}</view>
+  <view class="row" wx:for="{{stuT}}" data-index="{{index}}" catchtap='toOverview'>
+    <view class="img">
+      <image src="{{item.userImg}}"></image>
+    </view>
+    <view class="stuInfo">
+      <view class="stuName">{{item.username}}</view>
+      <view class="status t">已提交</view>
+    </view>
+    <view class="grade t">{{item.grade}}分</view>
+  </view>
+  <view class="row" wx:for="{{stuF}}" data-index="{{index}}">
+    <view class="img">
+      <image src="{{item.userImg}}"></image>
+    </view>
+    <view class="stuInfo">
+      <view class="stuName">{{item.username}}</view>
+      <view class="status f">未提交</view>
+    </view>
+    <view class="grade t"></view>
+  </view>
+</view>
+<view class="null" wx:if="{{stuT.length + stuF.length == 0}}">空空如也</view>

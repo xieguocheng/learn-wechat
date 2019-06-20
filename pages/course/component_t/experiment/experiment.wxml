@@ -1,0 +1,19 @@
+<view class="blocka">
+  <view class="heada">已发布的实验 ({{exList.length}})</view>
+  <view class="row" wx:for="{{exList}}"  catchtap='toExperiment' wx:for-index="index" data-set="{{index}}">
+    <view class="img">
+      <image src="/img/file/file.png"></image>
+    </view>
+    <view class="desc"> 
+      <view class="title">{{item.title}}</view>
+      <view class="time">{{item.createTimeStr}} 发布</view>
+      <view class="time">{{item.endTimeStr}} 截止</view>
+      <view class="statement">
+        <text  class="ascore">分值：{{item.score}}</text>
+        <text class="engagement engagement_t" wx:if="{{item.status == 1}}">进行中</text>
+        <text class="engagement engagement_f" wx:if="{{item.status == 0}}">已截止</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="tip">教师发布实验需要在电脑端进行发布</view>

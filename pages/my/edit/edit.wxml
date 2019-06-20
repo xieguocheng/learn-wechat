@@ -1,0 +1,48 @@
+<view class="head">
+  <view class="title">设置个人信息
+    
+  </view>
+  <form bindsubmit='submituser'>
+    <view class="row">
+      <label>姓名
+        <text style="color:red">*</text>
+      </label>
+      <input name="username" value='{{uinfo.username}}'></input>
+    </view>
+    <view class="row">
+      <label>学校
+        <text style="color:red">*</text>
+      </label>
+      <input name="school" placeholder="惠州学院"> </input>
+    </view>
+    <view class="row">
+      <label>学号/工号
+        <text style="color:red">*</text>
+      </label>
+      <input name="number" value='{{uinfo.number}}'> </input>
+    </view>
+    <view class="row">
+      <label>邮箱
+        <text style="color:red">*</text>
+      </label>
+      <input name="email" value='{{uinfo.email}}'></input>
+    </view>
+    <view class="row">
+      <label>手机
+        <text style="color:red">*</text>
+      </label>
+      <input name="telephone" value='{{uinfo.telephone}}'></input>
+    </view>
+    <view class="row">
+      <label>密码
+        <text style="color:red">*</text>
+      </label>
+      <input name="password" type="password"></input>
+    </view>
+    <button form-type='submit'>确定</button>
+  </form>
+
+</view>
+<view class="tip">
+  <text>学号和密码将作为用户网页登陆的凭证</text>
+</view>

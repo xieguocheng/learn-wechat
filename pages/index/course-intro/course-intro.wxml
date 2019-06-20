@@ -1,0 +1,34 @@
+<view class="head">
+
+  <view class="head-img">
+    <image wx:if="{{course.courseImg!=null}}" src="{{course.courseImg}}" style="width:{{imgWidth}}px;height:{{imgHeight}}px "></image>
+    
+  </view>
+
+  <view class="head-intro">
+    <view class="head-con">
+      <view class="cname">{{course.courseName}}</view>
+      <view class="tname" wx:if="{{course.courseTypename}}">课程类别：{{course.courseTypename}}</view>
+      <view class="join" catchtap="join">
+        加入课程
+      </view>
+    </view>
+    <view class="head-time">
+      <view class="head-time1">
+        <text>开课时间:</text>{{course.createTimeStr}} 
+      </view>
+      
+    </view>
+  </view>
+</view>
+<view class="main">
+  <view class="main-img">
+    <image wx:if="{{course.userImg!=null}}" src="{{course.userImg}}"></image>
+    <image wx:if="{{course.userImg==null}}" src="../../../img/my.png"></image>
+  </view>
+  <view class="main-intro">
+    <view class="tname">{{course.username}}老师</view>
+    <view class="tmail" wx:if="{{course.email}}">邮箱:{{course.email}}</view>
+    <view class="tdesc" wx:if="{{course.introduction}}">课程简介:{{course.introduction}}</view>
+  </view>
+</view>

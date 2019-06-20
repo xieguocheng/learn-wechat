@@ -1,0 +1,42 @@
+/* pages/my/set/set.wxss */
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.block{
+  width: 90%;
+  box-shadow: 0 0 15rpx #ddd;
+  background: white;
+  
+  margin: 20rpx auto;
+  min-height: 100rpx;
+  border-radius: 25rpx;
+  color: #666;
+}
+.block .row{
+  height: 100rpx;
+  line-height: 100rpx;
+  
+  font-size: 28rpx;
+ 
+  border-bottom: thin solid #ddd;
+}
+.block .row:not(.logout){
+  padding-left: 8%;
+}
+.block .row:active{
+  background: #efefef;
+}
+.block .row:last-child{
+  border: 0;
+}
+.block .row text{
+  float: right;
+  margin-right: 8%;
+  color:#666;
+}
+.block .logout{
+  color: red;
+  text-align: center;
+}

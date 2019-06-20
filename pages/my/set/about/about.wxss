@@ -1,0 +1,51 @@
+page{
+  background: #efefef;
+  color: #666;
+  font-size: 28rpx;
+}
+.block{
+  padding: 2% 0;
+}
+.block image{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 3% auto ;
+  display: block;
+}
+.block view{
+  text-align: center;
+}
+.block .title{
+  color: #76d7b3;
+  font-size: 120%;
+  font-weight: bold;
+}
+.block .ver{
+  color: #999;
+  padding-top: 1%;
+
+}
+.block .ver text{
+
+  margin-left: 2%;
+}
+.s image{
+  width: 260rpx;
+  height:260rpx;
+}
+.footer{
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  width: 100%;
+  font-size: 90%;
+  color: #999;
+  text-align: center;
+}
+.d{
+  width: 80%;
+  margin: auto;
+  border-bottom: thin solid #ddd;
+ padding:5% 0;
+ 
+}

@@ -1,0 +1,58 @@
+/* pages/my/mes/mes.wxss */
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.row{
+  background: white;
+  width: 84%;
+  margin:15px auto;
+  position: relative;
+  padding: 15rpx 3%;
+  border-radius: 15rpx;
+  box-shadow: 0 0 15rpx #ddd;
+}
+.row:active{
+  background: #efefef;
+}
+.row .row-img{
+  margin-top: 5rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: inline-block;
+}
+.row .row-img image{
+  width: 80rpx;
+  height: 80rpx;
+}
+.row .row-desc{
+  display: inline-block;
+  font-size: 28rpx;
+  
+}
+.row .row-desc .con{
+  
+  position: absolute;
+  top: 15rpx;
+  left: 140rpx;
+}
+.row .row-desc .con .name{
+  font-size: 34rpx;
+  color: 666;
+ 
+}
+.row .row-desc .con .desc{
+  color: #999;
+  width: 380rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.row .row-desc .time{
+  color: #999;
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+}

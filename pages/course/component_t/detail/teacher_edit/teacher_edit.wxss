@@ -1,0 +1,47 @@
+page{
+  color: #666;
+  font-size: 28rpx;
+  background: #efefef;
+}
+.img,
+.desc{
+  background: white;
+  padding:  5%;
+  box-shadow: 0 0 20rpx #ddd;
+  margin-bottom: 30rpx;
+}
+.img:active{
+  background: #efefef;
+}
+.img image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.img view{
+  display: inline-block;
+  
+  vertical-align: top;
+  height: 100rpx;
+ line-height: 100rpx; 
+ margin-left: 30rpx;
+}
+.desc view{
+  margin-bottom: 30rpx;
+}
+.desc view:last-child{
+  margin-bottom: 0;
+}
+.desc view label input{
+  margin-top: 15rpx;
+  border-bottom: thin solid #ddd;
+  padding: 15rpx 0;
+}
+button[form-type="submit"]{
+
+  color: white;
+  background: #24dd82;
+  font-weight: normal;
+}
+button[form-type="submit"]:active{
+  background: #178d52;
+}

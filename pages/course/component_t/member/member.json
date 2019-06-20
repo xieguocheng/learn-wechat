@@ -1,0 +1,7 @@
+{
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "创建课程",
+  "backgroundColor": "#efefef",
+  "component": true,
+  "usingComponents": {}
+}

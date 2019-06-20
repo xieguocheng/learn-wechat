@@ -1,0 +1,64 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.block{
+  padding: 3% 0 0;
+  background: white;
+  box-shadow: 0 0 10rpx #ddd;
+  margin-bottom: 30rpx;
+}
+.block .blockTitle{
+  border-bottom: thin dashed #ddd;
+  padding-bottom: 3%;
+  padding-left: 5%;
+}
+.block .blockCon{
+  margin-top: 3%;
+  padding: 0% 5%;
+}
+.block .blockCon .box{
+  width: 92%;
+
+  margin: auto;
+}
+.block .blockCon .box .item{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 4%;
+  margin-bottom: 4%;
+}
+.block .blockCon .box .item .itemCon{
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 75rpx;
+  color: white;
+  background: #24dd82;
+}
+
+
+.block .blockCon .box .item view.f{
+  background: #ff755d;
+  
+}
+
+.head .grade{
+  color: #24dd82;
+  display: block;
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  padding: 3%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3%;
+}
+.head .grade text{
+  font-size: 200%;
+  text-align: center;
+  border-bottom: 4rpx solid #24dd82;
+  
+}

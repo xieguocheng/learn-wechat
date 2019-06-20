@@ -1,0 +1,53 @@
+page{
+  background: #efefef;
+ 
+}
+.head{
+  background: white;
+  font-size: 28rpx;
+  width: 80%;
+  margin: 25rpx auto;
+  border-radius: 25rpx;
+  box-shadow: 0 0 15rpx #ddd;
+  padding: 5%;
+}
+.head .title{
+  color: #999;
+  padding-bottom: 20rpx;
+  margin-bottom: 40rpx;
+  border-bottom: thin solid #ddd;
+}
+
+.head form .row{
+  height: 60rpx;
+ 
+  margin:20rpx 0;
+  line-height: 60rpx;
+}
+.head form .row label{
+  float: left;
+  width: 170rpx;
+  color: #666;
+}
+.head form .row input{
+  display: inline-block;
+  height: 60rpx;
+  color: #666;
+  border-bottom: thin solid #ddd;
+  width: calc(100% - 170rpx);
+}
+button[form-type="submit"]{
+  margin-top: 60rpx;
+  color: white;
+  background: #24dd82;
+  font-weight: normal;
+}
+button[form-type="submit"]:active{
+  background: #178d52;
+}
+.tip{
+  color: #666;
+  font-size: 28rpx;
+  font-weight: lighter;
+  margin: 0 5%;
+}

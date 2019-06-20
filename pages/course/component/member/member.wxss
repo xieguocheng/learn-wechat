@@ -1,0 +1,57 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.blockm{
+  background: white;
+  border-bottom: thin solid #ddd;
+  margin-bottom: 130rpx;
+}
+.blockm .count{
+  border-bottom: thin dashed #efefef;
+  padding:2% 5%;
+}
+.blockm .row .row-con{
+  width: 90%;
+  margin: 0 auto;
+  padding: 40rpx 0;
+  border-bottom: thin solid #efefef;
+}
+.blockm .row:last-child .row-con{
+  border: 0;
+}
+.row:active{
+  background: #efefef;
+}
+.blockm .row .img{
+  width: 70rpx;
+  height: 70rpx;
+  display: inline-block;
+}
+.blockm .row .img image{
+  width: 100%;
+  height: 100%;
+}
+.blockm .row .desc{
+  margin-left: 30rpx;
+  color: #999;
+  display: inline-block;
+}
+.blockm .row .desc .name{
+  color: #444;
+  font-weight: normal;
+}
+.blockm .row .sign{
+  float: right;
+  line-height: 110rpx;
+}
+.blockm .row .sign text{
+  font-size: 34rpx;
+  color: #999;
+}
+.null{
+  color: #999;
+  text-align: center;
+  margin-top: -100rpx;
+}

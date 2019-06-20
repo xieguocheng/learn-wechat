@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/course/search/search",
+    "pages/create/create",
+    "pages/join/join",
+    "pages/course/component/question/question",
+    "pages/course/component/question/exam/exam",
+    "pages/course/component/question/phw_overview/phw_overview",
+    "pages/course/component/question/phw_overview/look_ques/look_ques",
+    "pages/course/component/activity/activity",
+    "pages/course/component/activity/experiment/experiment",
+    "pages/course/component/member/member",
+    "pages/course/component/detail/detail",
+    "pages/course/component/detail/teacher-intro/teacher-intro",
+    "pages/tabbar/tabbar",
+    "pages/course/component/member/member-intro/member-intro",
+    "pages/tabbar_t/tabbar_t",
+    "pages/course/component_t/homework/homework",
+    "pages/common/common",
+    "pages/course/component_t/experiment/experiment",
+    "pages/course/component_t/experiment/ex_show/ex_show",
+    "pages/course/component_t/homework/phw_show/phw_show",
+    "pages/course/component_t/homework/phw_show/phw_overview/phw_overview",
+    "pages/course/component_t/homework/phw_show/phw_overview/look_ques/look_ques",
+    "pages/course/component_t/homework/hw_show/hw_show",
+    "pages/course/component_t/homework/hw_edit/hw_edit",
+    "pages/course/component_t/homework/hw_show/hw_addQues/hw_addQues",
+    "pages/course/component_t/homework/hw_create/hw_create",
+    "pages/index/index",
+    "pages/course/component_t/detail/detail",
+    "pages/course/component_t/member/member",
+    "pages/course/component_t/detail/teacher_edit/teacher_edit",
+    "pages/searchCourse/searchCourse",
+    "pages/searchResult/searchResult",
+    "pages/my/my",
+    "pages/course/course",
+    "pages/index/course-intro/course-intro",
+    "pages/my/mes/mes",
+    "pages/my/help/help",
+    "pages/my/help/help_detail/help_detail",
+    "pages/my/set/set",
+    "pages/my/feedback/feedback",
+    "pages/my/edit/edit",
+    "pages/index/search/search",
+    "pages/my/set/about/about",
+    "pages/course/component_t/member/member-intro/member-intro"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#efefef",
+    "backgroundColor": "#efefef"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#24dd82",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home-s.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "iconPath": "img/course.png",
+        "selectedIconPath": "img/course-s.png",
+        "text": "课程"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/my-s.png",
+        "text": "个人"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "debug": true,
+  "component": true
+}

@@ -1,0 +1,29 @@
+page{
+   background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.row{
+  width: 90%;
+  margin: auto;
+  border-bottom: thin solid #ddd;
+  background: white;
+  padding: 5%;
+}
+.row:active{
+  background: #efefef;
+}
+.row text.index{
+  background:#24dd82;
+  width:35rpx;
+  height: 35rpx;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35rpx;
+  color: white;
+  margin-right: 15rpx;
+}
+.desc{
+
+}

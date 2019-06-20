@@ -1,0 +1,77 @@
+page{
+   background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.block{
+  width: 80%;
+  margin: 25rpx auto;
+  background: white;
+  border-radius: 25rpx;
+  padding: 5%;
+  box-shadow: 0 0 20rpx #ddd;
+}
+label{
+  font-size: 28rpx;
+ 
+  border-bottom: thin solid #ddd;
+  display: block;
+  width: 100%;
+  padding-bottom: 20rpx;
+  margin: 20rpx 0;
+}
+radio-group view{
+  width: 80%;
+  margin-left: 5%;
+}
+radio-group view radio{
+  font-size: 28rpx;
+  margin: 15rpx;
+}
+textarea{
+  margin-top: 25rpx;
+  border: thin solid #ddd;
+  width: 85%;
+  margin: auto;
+  padding: 2%;
+  font-size: 28rpx;
+  border-radius: 15rpx;
+  height: 200rpx;
+}
+.add-img{
+  margin-left: 0;
+  border:thin dashed #ddd;
+  background: white;
+  width: 140rpx;
+  height: 140rpx;
+  font-size: 200%;
+  color: #666;
+  line-height: 120rpx;
+}
+.add-img:active{
+  background: #efefef;
+}
+.contact label{
+  border: 0;
+  margin: 15rpx 0;
+}
+.contact input{
+  border-bottom: thin solid #ddd;
+  
+
+  font-size: 34rpx;
+  height: 60rpx;
+}
+#submit{
+  background: #24dd82;
+  color: white;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 30rpx;
+  border: 0;
+  display: block;
+  font-weight: normal;
+}
+#submit:active{
+  background: #178d52;
+}

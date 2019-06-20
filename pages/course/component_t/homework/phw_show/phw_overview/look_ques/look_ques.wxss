@@ -1,0 +1,104 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+  padding-bottom: 140rpx;
+}
+.block,.head{
+  width: 90%;
+  margin: 0 auto 30rpx;
+  background: white;
+  box-shadow:  0 0 10rpx #ddd;
+}
+.head{
+  width: 90%;
+  padding: 3% 0;
+}
+.head view{
+  margin: 0% 5%;
+  height: 70rpx;
+  
+ line-height: 70rpx;
+}
+.head view text{
+  vertical-align: top;
+  height: 70rpx;
+}
+.head input{
+  width: 80%;
+  height: 70rpx;
+  display: inline-block;
+  vertical-align: top;
+  border-bottom: thin solid #ddd;
+}
+.block .title{
+  border-bottom: thin dashed #ddd;
+}
+.block view.block-con{
+  margin: 3% 5%;
+}
+.block .title,.edit{
+  padding: 3% 5%;
+  
+}
+.block .desc{
+  color: #444;
+}
+.block .ans{
+  padding-top: 5%;
+
+}
+.block .ans,
+.block .cho{
+
+  width: 100%;
+
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  
+}
+.block .blockCon{
+  margin-top: 3%;
+  padding: 0% 5%;
+}
+.block .blockCon .box{
+  width: 92%;
+
+  margin: auto;
+}
+.block .blockCon .box .item{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 4%;
+  margin-bottom: 4%;
+}
+.block .blockCon .box .item .itemCon{
+  width: 75rpx;
+  height: 75rpx;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 75rpx;
+  color: white;
+  background: #24dd82;
+}
+.block .blockCon .box .item view.f{
+  background: #ff755d;
+}
+.block  .myans{
+  border-top: thin dashed #ddd;
+  padding: 3% 5%;
+  margin-top: 3%;
+}
+.block .ans1{
+  padding-top: 5%;
+}
+.block .con{
+  padding: 3% 5%;
+}
+.t1{
+  color: #24dd82;
+}
+.f1{
+  color: #ff755d;
+}

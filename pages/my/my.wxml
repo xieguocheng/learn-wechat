@@ -1,0 +1,20 @@
+<view id="head">
+  <view id="head-con">
+    <open-data type="userAvatarUrl"></open-data>
+    <open-data type="userNickName" lang="zh_CN"></open-data>
+    <view id="modify" class="iconfont icon-bianji" catchtap='toEdit'><text></text></view>
+  </view>
+</view>
+<view id="main">
+  <view class="block">
+    <view class="row" catchtap='toCourse'><view class="icon-fuzhi iconfont icon">课程<text>></text></view></view>
+    <view class="row" catchtap='toMes' ><view class="icon-duanxin iconfont icon">通知<text>></text></view></view>
+  </view>
+  <view class="block">
+    <view class="row" catchtap='toHelp'><view class="icon-xinxi iconfont icon">帮助<text>></text></view></view>
+    <view class="row" catchtap='toFeedback'><view class="icon-pinglun iconfont icon">反馈<text>></text></view></view>
+  </view>
+  <view class="block">
+    <view class="row" catchtap='toSet'><view class="icon-shezhi iconfont icon">设置<text>></text></view></view>
+  </view>
+</view>

@@ -1,0 +1,55 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.blockq{
+  background: white;
+  border-bottom: thin solid #ddd;
+  margin-bottom: 130rpx;
+}
+.blockq .headq{
+  border-bottom: thin dashed #ddd;
+  padding:2% 5%;
+}
+.blockq .row:active{
+  background: #ddd;
+}
+.blockq .row .row-con{
+  display: flex;
+  position: relative;
+  padding: 4% 0;
+  margin: 0 5%;
+  border-bottom: thin solid #efefef;
+}
+.blockq .row:last-child .row-con{
+  border-bottom:0;
+}
+.blockq .row .row-con .img{
+  width: 75rpx;
+  height: 75rpx;
+  margin-right: 30rpx;
+}
+.blockq .row .row-con .img image{
+  width: 100%;
+  height: 100%;
+}
+.blockq .row .row-con .desc .title{
+  width: 450rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.blockq .row .row-con .desc .statement{
+  color: #999;
+}
+.null{
+  color: #999;
+  text-align: center;
+  margin-top: -100rpx;
+}
+.score{
+  position: absolute;
+  right: 0;
+  bottom: 25rpx;
+}

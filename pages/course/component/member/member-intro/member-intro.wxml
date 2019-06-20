@@ -1,0 +1,11 @@
+<view class="block">
+  <view class="cricle"></view>
+  <view class="header">
+    <view class="name">{{memberinfo.username}}</view>
+  </view>
+  <view class="main">
+    <view class="school iconfont icon-xuexiao">惠州学院</view>
+    <view class="num iconfont icon-idinfo">{{memberinfo.number}}</view>
+    <view class="mail iconfont icon-youxiang">{{memberinfo.email}}</view>
+  </view>
+</view>

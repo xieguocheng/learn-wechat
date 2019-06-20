@@ -1,0 +1,15 @@
+<view class="block">
+  <view class="cricle"></view>
+  <view class="header">
+    <view class="name">{{studentInfo.username}}</view>
+  </view>
+  <view class="main">
+   <view class="school iconfont icon-xuexiao" wx:if="{{studentInfo.sex==0}}">性别：未知</view>
+    <view class="school iconfont icon-xuexiao" wx:if="{{studentInfo.sex==1}}">性别：男</view>
+    <view class="school iconfont icon-xuexiao" wx:if="{{studentInfo.sex==2}}">性别：女</view>
+    <view class="school iconfont icon-xuexiao" wx:if="{{studentInfo.school!=null}}">学校：{{studentInfo.school}}</view>
+    <view class="school iconfont icon-xuexiao" wx:if="{{studentInfo.school==null}}">学校：未知</view>
+    <view class="num iconfont icon-idinfo">学号：{{studentInfo.number}}</view>
+    <view class="mail iconfont icon-youxiang">邮箱：{{studentInfo.email}}</view>
+  </view>
+</view>

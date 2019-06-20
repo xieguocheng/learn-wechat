@@ -1,0 +1,22 @@
+<view class="blocka">
+  <view class="heada">实验 ({{activity.length}})</view>
+  <view class="row" wx:for="{{activity}}" catchtap='toExperiment' data-index='{{index}}'>
+    <view class="img">
+      <image src="/img/file/file.png"></image>
+    </view>
+    <view class="desc">
+      <view class="title">{{item.title}}</view>
+      <view class="time">{{item.createTimestring}} 发布</view>
+      <view class="time">{{item.endTimestring}} 截止</view>
+      <view class="statement">
+        <view class="text" style="color:green" wx:if="{{item.status == 1}}">进行中</view>
+        <view class="text" style="color:red" wx:if="{{item.status == 0}}">已结束</view>
+        <text wx:if="{{item.userstatus == 1}}" class="ascore">得分：{{item.userscore}}</text>
+        <text class="engagement engagement_f" wx:if="{{item.userstatus ==0}}">未提交</text>
+        <text class="engagement engagement_t" wx:if="{{item.userstatus == 1}}">已提交</text>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view class="null" wx:if="{{activity.length == 0}}">空空如也</view>

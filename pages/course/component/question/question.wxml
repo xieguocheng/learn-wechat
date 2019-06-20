@@ -1,0 +1,19 @@
+<view class="blockq">
+  <view class="headq">作业 ({{taskq.length}})</view>
+
+  <view class="row" wx:for="{{taskq}}" catchtap="toExams" data-index='{{index}}'>
+    <view class="row-con">
+      <view class="img">
+        <image src="/img/file/link.png"></image>
+      </view>
+      <view class="desc">
+        <view class="title">{{item.title}}</view>
+        <view class="statement" wx:if="{{item.usertaskstatus == 0}}">未完成</view>
+        <view class="statement" wx:if="{{item.usertaskstatus == 1}}">已提交</view>
+        <view class="statement score" wx:if="{{item.usertaskstatus == 1}}">得分：{{item.grade}}</view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view class="null" wx:if="{{taskq.length == 0}}">空空如也</view>

@@ -1,0 +1,90 @@
+<!-- 顶部答题卡 -->
+<view class="block">
+  <view class="title">答题卡</view>
+  <view class="blockCon">
+    <view class="box">
+      <view class="item" wx:for="{{questionlist}}" wx:for-index="index" catchtap='switchQues' data-set="{{index}}">
+        <view class="itemCon t" hidden="{{item.grade ==-1?true:flase}}">
+          <text>{{index+1}}</text>
+        </view>
+        <view class="itemCon f" hidden="{{item.grade !=-1?true:flase}}">
+          <text>{{index+1}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 同一个页面 3个form(题) 根据type不同而hidden,每次显示一题 -->
+<form wx:if="{{questionlist[index].questionType == 1}}" bindsubmit="submit">
+  <view class="block">
+    <view class="row">
+      <view class="title">{{index*1+1}}. {{type[questionlist[index].questionType-1]}}</view>
+      <view class="block-con">
+        <view class="desc">{{questionlist[index].questionDesc}}</view>
+        <radio-group name="single">
+          <view class="cho" wx:if="{{questionlist[index].question_type!=3}}">
+            <view wx:for="{{questionlist[index].choicelist}}" wx:for-index="idx">
+              <radio checked="{{checked[idx]}}" value="{{ans_id[idx]}}"></radio><text>{{ans_id[idx]}}. {{item}}</text>
+            </view>
+          </view>
+        </radio-group>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="footer" >
+    <button wx:if="{{index != 0}}" class="switch"  form-type='submit' id="1">上一题</button>
+    <button wx:if="{{index != questionlist.length - 1}}" class="switch" form-type='submit' id="2">下一题</button>
+    <button wx:if="{{index == questionlist.length - 1}}" class="subm" form-type='submit' id="3">保存并提交</button>
+  </view>
+ 
+</form>
+<form wx:if="{{questionlist[index].questionType == 2}}" bindsubmit="submit">
+  <view class="block">
+    <view class="row">
+      <view class="title">{{index*1+1}}. {{type[questionlist[index].questionType-1]}}</view>
+      <view class="block-con">
+        <view class="desc">{{questionlist[index].questionDesc}}</view>
+        <checkbox-group name="multi">
+          <view class="cho" wx:if="{{questionlist[index].question_type!=3}}">
+            <view wx:for="{{questionlist[index].choicelist}}" wx:for-index="idx">
+              <checkbox checked="{{checked[idx]}}" value="{{ans_id[idx]}}"></checkbox><text>{{ans_id[idx]}}. {{item}}</text>
+            </view>
+          </view>
+        </checkbox-group>
+      </view>
+    </view>
+  </view>
+
+  <view class="footer" >
+    <button wx:if="{{index != 0}}" class="switch"  form-type='submit' id="1">上一题</button>
+    <button wx:if="{{index != questionlist.length - 1}}" class="switch" form-type='submit' id="2">下一题</button>
+    <button wx:if="{{index == questionlist.length - 1}}" class="subm" form-type='submit' id="3">保存并提交</button>
+  </view>
+
+</form>
+<form wx:if="{{questionlist[index].questionType == 3}}" bindsubmit="submit">
+  <view class="block">
+    <view class="row">
+      <view class="title">{{index*1+1}}. {{type[questionlist[index].questionType-1]}}</view>
+      <view class="block-con">
+        <view class="desc">{{questionlist[index].questionDesc}}</view>
+       
+          <view class="cho" wx:if="{{questionlist[index].question_type!=3}}">
+            <view wx:for="{{questionlist[index].answer}}" wx:for-index="idx">
+              <text class="blank_desc">{{myBlank_id[idx]}}：</text><input value='{{questionlist[index].useranswer[idx]}}'  class="blank" name="{{idx}}"></input>
+            </view>
+          </view>
+      
+      </view>
+    </view>
+  </view>
+
+  <view class="footer" >
+    <button wx:if="{{index != 0}}" class="switch"  form-type='submit' id="1">上一题</button>
+    <button wx:if="{{index != questionlist.length - 1}}" class="switch" form-type='submit' id="2">下一题</button>
+    <button wx:if="{{index == questionlist.length - 1}}" class="subm" form-type='submit' id="3">保存并提交</button>
+  </view>
+
+</form>

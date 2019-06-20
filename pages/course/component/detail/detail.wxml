@@ -1,0 +1,38 @@
+<view class="blockd">
+  <view class="row header" catchtap='toTeacherInfo'>
+    <view class="img"><image src="{{info.courseImg}}"></image></view>
+    <view class="desc">
+      <view class="title">{{info.courseName}}</view>
+      <view class="teacher">任课老师:  {{info.username}}（点击查看老师信息）</view>
+    </view>
+  </view>
+  <view class="courseId" catchtap='copyId'>
+    <view class="courseId-con">班课号（点击复制）：{{info.classnum}}</view>
+  </view>
+</view>
+<view class="blockd" >
+  <view class="row" wx:for="{{classify}}">
+    <view class="row-con">
+      <image src="{{item.src}}" class="icon"></image>
+      <view>
+        <view class="tag">{{item.title}}</view> 
+        <view class="text" wx:if="{{item.desc != null}}">{{item.desc}}</view>
+        <view class="text" wx:if="{{item.desc == null}}">暂未设置</view>
+      </view>
+    </view>
+  </view>
+</view> 
+<view class="blockd">
+  <view class="row" wx:for="{{intro}}">
+    <view class="row-con">
+      <image src="{{item.src}}" class="icon"></image>
+      <view>
+        <view class="head">{{item.title}}</view>
+        <view class="con" wx:if="{{item.con == null}}">暂无内容</view>
+        <view class="con" wx:if="{{item.con !== null}}">{{item.con}}</view>
+      </view>
+      
+    </view>
+  </view>
+</view>
+<button  catchtap='toquit'>退出班课</button>

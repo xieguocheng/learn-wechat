@@ -1,0 +1,29 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  border-top: thin solid #ddd;
+}
+.head{
+  margin: 50rpx auto;
+  width: 90%;
+  
+  overflow: hidden;
+}
+.head input{
+  background:white;
+  color:  #666;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 5%;
+  width: 90%;
+  margin-bottom: 30rpx;
+  border-radius: 5rpx;
+  border: thin solid #ddd;
+}
+button[form-type='submit']{
+  color: white;
+  background: #24dd82;
+}
+button[form-type='submit']:active{
+  background: #178d52;
+}

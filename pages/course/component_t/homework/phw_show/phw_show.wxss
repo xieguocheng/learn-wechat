@@ -1,0 +1,58 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.block{
+  background: white;
+  margin-bottom: 30rpx;
+  box-shadow: 0 0 10rpx #ddd;
+}
+.block .blockTitle{
+  padding: 3% 5%;
+  border-bottom: thin dashed #ddd;
+}
+.block .row{
+  padding: 3% 5%;
+  position: relative;
+  border-bottom: thin solid #ddd;
+}
+.block .row:active{
+  background: #efefef;
+}
+.block .row:last-child{
+  border-bottom: 0;
+}
+.block .row .img{
+  width: 75rpx;
+  height: 75rpx;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 5%;
+}
+.block .row .img image{
+  width: 100%;
+  height: 100%;
+  
+}
+.block .row .stuInfo{
+  display: inline-block;
+  vertical-align: top;
+
+}
+.block .row .grade{
+  
+  vertical-align: text-bottom;
+  float: right;
+}
+.t{
+  color: green;
+}
+.f{
+  color: red;
+}
+.null{
+  font-weight: lighter;
+  text-align: center;
+
+}

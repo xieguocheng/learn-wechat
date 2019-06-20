@@ -1,0 +1,13 @@
+<form bindsubmit="modifyCourseBaseMsg">
+  <view class="img" >
+    <image src="{{myCourseImg}}" bindtap='chooseCourseImg'></image>
+    <view>修改课程封面</view>
+  </view>
+  <view class="desc">
+    <view class="title">
+      <label>课程名称：<input name='courseName' placeholder='请输入' value='{{myCourseName}}'></input></label>
+    </view>
+    
+  </view>
+  <button form-type="submit">保存修改</button>
+</form>

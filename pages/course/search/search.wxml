@@ -1,0 +1,25 @@
+<form bindsubmit='search'>
+  <view class='search'>
+    <input type='text' placeholder='输入课程名' name="coursename" focus="true"></input>
+  </view>
+  <button form-type='submit'>搜索</button>
+</form>
+
+
+<view class="recommend">
+  <view class="title">搜索结果</view>
+  <view wx:for="{{courselist}}" class="item-container">
+    <view class="row" catchtap="to" data-index='{{index}}'>
+      <view class="photo">
+        <image src="{{item.courseImg}}"></image>
+      </view>
+      <view class="desc">
+        <text>{{item.courseName}}</text>
+        <text class="teacher">{{item.username}}</text>
+      </view>
+      <view class="trend">></view>
+    </view>
+  </view>
+  <view wx:if="{{courselist.length==0}}" class="null">
+    <text>空空如也，请输入关键字</text> </view>
+</view>

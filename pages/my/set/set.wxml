@@ -1,0 +1,4 @@
+<view class="block" catchtap='toAbout'>
+    <view class="row"><view class="about">关于<text>></text></view></view>
+</view>
+

@@ -1,0 +1,145 @@
+<view class="block">
+  <view class="head-head">
+    <image class="img" src="/img/file/file.png"></image>
+    <view class="desc">
+      <view class="title">{{experimentInfo.title}}</view>
+      <view class="score">分值： {{experimentInfo.score}}
+  
+      </view>
+
+    </view>
+  </view>
+  <view class="head-main">
+    <view class="createTime">发布时间：
+      <text>{{experimentInfo.createTimestring}}</text>
+    </view>
+    <view class="deadLine">截止时间：
+      <text>{{experimentInfo.endTimestring}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="block">
+  <view class="blockTitle">实验描述</view>
+  <view class="experimentDesc" wx:if="{{experimentInfo.detail!=''}}">{{experimentInfo.detail}}</view>
+  <view class="experimentDesc" wx:if="{{experimentInfo.detail==''}}">空空如也</view>
+</view>
+
+<view class="block">
+  <view class="blockTitle">实验附件</view>
+
+  <view class="accessory" wx:for="{{urllist}}">
+
+    <view wx:if="{{item.type == 'doc'}}">
+      <view class="arow" catchtap='open' data-index='{{index}}'>
+        <view class="arow-con">
+          <image class="img" src="/img/file/word.png"></image>
+          <view class="desc">
+            <view class="title">{{item.documentname}}</view>
+            <view class="score" style="color:#5099f4">点击预览</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{item.type == 'docx'}}">
+      <view class="arow" catchtap='open' data-index='{{index}}'>
+        <view class="arow-con">
+          <image class="img" src="/img/file/word.png"></image>
+          <view class="desc">
+            <view class="title">{{item.documentname}}</view>
+            <view class="score" style="color:#5099f4">点击预览</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{item.type == 'ppt'}}">
+      <view class="arow" catchtap='open' data-index='{{index}}'>
+        <view class="arow-con">
+          <image class="img" src="/img/file/point.png"></image>
+          <view class="desc">
+            <view class="title">{{item.documentname}}</view>
+            <view class="score" style="color:#5099f4">点击预览</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{item.type == 'xls'}}">
+      <view class="arow" catchtap='open' data-index='{{index}}'>
+        <view class="arow-con">
+          <image class="img" src="/img/file/excel.png"></image>
+          <view class="desc">
+            <view class="title">{{item.documentname}}</view>
+            <view class="score" style="color:#5099f4">点击预览</view>
+          </view>
+        </view>
+      </view>
+
+
+
+
+    </view>
+  </view>
+<view class="null" wx:if="{{urllist[0].url==''}}">空空如也</view>
+</view>
+
+
+
+
+<view class="block">
+  <view class="blockTitle">我上传的附件</view>
+
+  <view class="accessory" wx:for="{{mylist}}">
+    <view wx:if="{{item.type == 'docx'}}">
+      <view class="arow" catchtap='toopen' data-index='{{index}}'>
+        <view class="arow-con">
+          <image class="img" src="/img/file/word.png"></image>
+          <view class="desc">
+            <view class="title">{{item.documentname}}</view>
+            <view class="score" style="color:#5099f4">点击预览</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view wx:if="{{item.type == 'doc'}}">
+      <view class="arow" catchtap='open' data-index='{{index}}'>
+        <view class="arow-con">
+          <image class="img" src="/img/file/word.png"></image>
+          <view class="desc">
+            <view class="title">{{item.documentname}}</view>
+            <view class="score" style="color:#5099f4">点击预览</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{item.type == 'ppt'}}">
+      <view class="arow" catchtap='open' data-index='{{index}}'>
+        <view class="arow-con">
+          <image class="img" src="/img/file/point.png"></image>
+          <view class="desc">
+            <view class="title">{{item.documentname}}</view>
+            <view class="score" style="color:#5099f4">点击预览</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{item.type == 'xls'}}">
+      <view class="arow" catchtap='open' data-index='{{index}}'>
+        <view class="arow-con">
+          <image class="img" src="/img/file/excel.png"></image>
+          <view class="desc">
+            <view class="title">{{item.documentname}}</view>
+            <view class="score" style="color:#5099f4">点击预览</view>
+          </view>
+        </view>
+      </view>
+
+
+
+
+    </view>
+  </view>
+  <view class="null" wx:if="{{mylist[0].url==''}}">空空如也</view>
+</view>
+<view class="tip">上传附件需要在电脑端网页操作</view>

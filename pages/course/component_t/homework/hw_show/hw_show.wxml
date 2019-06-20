@@ -1,0 +1,57 @@
+<view class="head">
+  <view>
+    <text>标题：</text><input type='text' value="{{name}}" bindblur='changeName'></input>
+  </view>
+</view>
+<view class="block" wx:for="{{testList}}" wx:for-index="index">
+  <view class="row" >
+    <view class="title">{{index+1}}. {{type[item.questionType-1]}}</view>
+    <view class="block-con">
+      <view class="desc">{{item.questionDesc}}</view>
+      <view class="cho" wx:if="{{item.questionType!=3}}">
+        <text wx:for="{{item.choices}}" wx:for-index="idx" >
+          {{ans_id[idx]}} {{item}}
+        </text>
+      </view>
+      <view class="ans" wx:if="{{item.questionType!=3}}">
+        <text>答案：{{item.answers[0]}}</text>    
+      </view>
+      <view class="ans"  wx:if="{{testList[index].questionType==3}}" wx:for="{{item.answers}}" wx:for-index="idx1">
+        <text >{{blank_id[idx1]}}：{{item}}</text>
+      </view>
+    </view>
+    <view class="edit">
+      <view catchtap='edititem' data-set="{{index}}">编辑</view>
+      <view catchtap='delitem' data-set="{{index}}">删除</view>
+    </view>
+  </view>
+</view>
+<button class="create" catchtap='createQuestion'>创建下一题</button>
+<button class="save" catchtap="saveQuestion">保存临时修改</button>
+<view class="footer">
+  <button catchtap='showDialogBtn'>确认发布</button>
+</view>
+
+<!--弹窗-->
+<form bindsubmit="GetName">
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title"><text>请设置截止时间
+\n(发放后无法再修改)</text>   </view>
+  
+    <view class="modal-content">
+      <view class="modal-input">
+         <picker mode="date" value="{{date}}" start="{{start_date}}" end="2030-12-01" bindchange="bindDateChange" class="input" name="date"
+  >
+    <view class="picker">当前选择: {{date}}</view>
+     
+  </picker>
+       
+      </view>
+    </view>
+    <view class="modal-footer">
+      <button class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</button>
+      <button class="btn-confirm" data-status="confirm" form-type='submit'>确定</button>
+    </view>
+  </view>
+</form>

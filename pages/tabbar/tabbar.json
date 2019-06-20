@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "component_qu": "/pages/course/component/question/question",
+    "component_ac": "/pages/course/component/activity/activity",
+    "component_mem": "/pages/course/component/member/member",
+    "component_det": "/pages/course/component/detail/detail"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "课程",
+  "backgroundColor": "#efefef"
+}

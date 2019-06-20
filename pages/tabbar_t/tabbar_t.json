@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "component_hom": "/pages/course/component_t/homework/homework",
+    "component_exp": "/pages/course/component_t/experiment/experiment",
+    "component_mem": "/pages/course/component_t/member/member",
+    "component_det": "/pages/course/component_t/detail/detail"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "",
+  "backgroundColor": "#efefef"
+}

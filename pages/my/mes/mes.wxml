@@ -1,0 +1,13 @@
+<!--pages/my/mes/mes.wxml-->
+<view class="row" wx:for="{{mess}}">
+  <view class="row-img"><image src="{{item.img}}"></image></view>
+  <view class="row-desc">
+    <view class="con">
+      <view class="name">{{item.name}}</view>
+      <view class="desc">{{item.con}}</view>
+    </view>
+    <view class="time">{{item.time}}</view>
+  </view>
+  
+</view>
+<view wx:if="{{mess.length==0}}" class="null" style="text-align:center">空空如也</view>

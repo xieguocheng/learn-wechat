@@ -1,0 +1,19 @@
+<view class="head block">
+  <view class="blockTitle">得分</view>
+  <view class="grade"><text>{{sumGrade}}</text></view>
+</view>
+<view class="block">
+  <view class="blockTitle">答题详情</view> 
+  <view class="blockCon">
+    <view class="box">
+      <view class="item"  wx:for="{{quesList}}" wx:for-index="index" catchtap='lookQues' data-set="{{index}}">
+        <view class="itemCon t" hidden="{{item.questionGrade == 0?true:flase}}">
+          <text>{{index+1}}</text>
+        </view>
+        <view class="itemCon f" hidden="{{item.questionGrade != 0?true:flase}}">
+          <text>{{index+1}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<view class="head">
+  <text>第{{(index*1+1)}}题.[{{ques_type[question.questionType-1]}}]</text>
+</view>
+<form bindsubmit="GetSingle" hidden="{{question.questionType -1 ==0?flase:true}}">
+  <textarea placeholder="问题描述（600字数）" name="textarea" maxlength="700" value="{{question.questionDesc}}" bindblur='updateDesc'></textarea>
+  <view class="answer_area">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <view class="ans_row" wx:for="{{question.choices}}" wx:for-index="idx" >
+        <radio value='{{ans_id[idx]}}' class="item" checked='{{checked[idx]}}'>{{ans_id[idx]}}：</radio>
+        <input placeholder='答案描述' name="{{idx}}" value="{{item}}" data-set="{{idx}}" bindblur='updateChoice'></input>
+      </view>
+    </radio-group>
+    <view class="add" catchtap='additem' id="0">+添加选项</view>
+    <view class="del" catchtap='delitem' id="0">-删除选项</view>
+  </view>
+  <button class="submit" form-type='submit'>保存修改</button>
+</form>
+
+<form bindsubmit="GetSingle" hidden="{{question.questionType-1==1?flase:true}}">
+  <textarea placeholder="问题描述（600字数）" name="textarea" value="{{question.questionDesc}}"maxlength="700" bindblur='updateDesc'></textarea>
+
+  <view class="answer_area">
+    <checkbox-group class="radio-group" bindchange="checkboxChange">
+      <view class="ans_row" wx:for="{{question.choices}}" wx:for-index="idx1">
+        <checkbox value='{{ans_id[idx1]}}' class="item" checked='{{checked[idx1]}}'>{{ans_id[idx1]}}： </checkbox>
+        <input placeholder='答案描述' name="{{idx1}}" value="{{item}}" data-set="{{idx1}}" bindblur='updateChoice'></input>
+      </view>
+    </checkbox-group>
+    <view class="add" catchtap='additem' id="1">+添加选项</view>
+    <view class="del" catchtap='delitem' id="1">-删除选项</view>
+  </view>
+
+  <button class="submit" form-type='submit'>保存修改</button>
+</form>
+<form bindsubmit="GetBlank" hidden="{{question.questionType-1==2?flase:true}}">
+  <textarea placeholder="问题描述（600字数）" name="textarea" value="{{question.questionDesc}}" maxlength="700" bindblur='updateDesc'></textarea>
+  <view class="answer_area">
+    <view>
+      <view class="ans_row" wx:for="{{question.answers}}" wx:for-index="idx2">
+        <text class="item">第{{idx2+1}}空：</text>
+        <input placeholder='答案描述' name="{{idx2}}" data-set="{{idx2}}"  value="{{item}}" bindblur='updateAns'></input>
+      </view>
+    </view>
+    <view class="add" catchtap='additem' id="2">+添加选项</view>
+    <view class="del" catchtap='delitem' id="2">-删除选项</view>
+  </view>
+  
+  <button class="submit" form-type='submit'>保存修改</button>
+</form>

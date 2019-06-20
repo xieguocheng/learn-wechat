@@ -1,0 +1,34 @@
+<view class='search'>
+  <input type='text' placeholder='输入课程名' confirm-type='search' bindconfirm='getCourseList'
+catchtap="toSearch" disabled='true'></input>
+</view>
+
+<view class="home-swiper">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-active-color='{{activeColor}}' indicator-color='{{indicatorColor}}' style="height:{{imgHeight}}px " bindchange="bindchange">
+    <block wx:for="{{swiper}}" >
+      <swiper-item bindtap="intro" 
+   data-id='{{index}}'>
+        <image src="{{item.courseImg}}" class="slide-image" style="width:{{imgWidth}}px;height:{{imgHeight}}px " />
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="recommend">
+  <view class="title">推荐课程</view>
+
+
+  <view wx:for="{{courseList}}" class="row" bindtap="intro" 
+   data-id='{{index}}'>
+    <view class="photo">
+    <image wx:if="{{item.courseImg!=null}}" src="{{item.courseImg}}"></image>
+    <image wx:if="{{item.courseImg==null}}" src="{{courseImg}}"></image>
+    </view>
+    <view class="desc">{{item.courseName}}<text class="teacher">{{item.username}}老师</text></view>
+    <view class="trend">></view>
+  </view>
+
+  <view class="null" wx:if="{{courseList.length==0}}">空空如也</view>
+</view>
+<view class="add iconfont icon-zengjia" id="add" catchtap="toAdd">
+</view>

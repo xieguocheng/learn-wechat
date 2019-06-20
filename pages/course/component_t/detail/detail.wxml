@@ -1,0 +1,92 @@
+<view class="blockd">
+  <view class="row header" catchtap='toTeacherInfo'>
+    <view class="img">
+      <image src="{{myCourseImg}}"></image>
+    </view>
+    <view class="desc">
+      <view class="title">{{myCourseName}}</view>
+      <view class="teacher">{{username}}老师</view>
+    </view>
+    <view class="trend">></view>
+  </view>
+  <view class="public">
+    是否公开课程：
+    <switch bindchange="joinCourse" checked="{{myCourseInfo.added==1?true:''}}"></switch>
+  </view>
+  <view class="courseId" catchtap='copyId'>
+    <view class="courseId-con">班课号（点击复制）：{{myCourseInfo.classnum}}</view>
+  </view>
+</view>
+
+<form bindsubmit='modifyCourseDetails'>
+  <view class="blockd">
+    <view class="row">
+      <view class="row-con">
+        <image src="/img/detail/class.png" class="icon"></image>
+        <view>
+          <view class="tag">班级</view>
+          <input class="text" placeholder="点击设置" name='classname' value='{{myCourseInfo.classname}}'></input>
+        </view>
+      </view>
+
+      <view class="row-con">
+        <image src="/img/detail/classify.png" class="icon"></image>
+        <view>
+          <view class="tag">课程分类</view>
+          <view class='com-selectBox'>
+            <view class='com-sContent' bindtap='selectToggle'>
+              <view class='com-sTxt'>{{nowText}}</view>
+              <image src='/img/line.png' class='com-sImg' animation="{{animationData}}"></image>
+            </view>
+            <view class='com-sList' wx:if="{{selectShow}}">
+              <view wx:for="{{courseTypeList}}" data-index="{{index}}" wx:key='' class='com-sItem' bindtap='setText'>{{item.name}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class="row-con">
+        <image src="/img/detail/schedule.png" class="icon"></image>
+        <view>
+          <view class="tag">所属学期</view>
+          <input class="text" placeholder="点击设置" name='semeter' value='{{myCourseInfo.semeter}}'></input>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="blockd">
+    <view class="row">
+      <view class="row-con">
+        <image src="/img/detail/intro.png" class="icon"></image>
+        <view>
+          <view class="head">课程简介</view>
+          <input class="con" placeholder="点击设置" name='introduction' value='{{myCourseInfo.introduction}}'></input>
+        </view>
+      </view>
+
+      <view class="row-con">
+        <image src="/img/detail/study.png" class="icon"></image>
+        <view>
+          <view class="head">学习要求</view>
+          <input class="con" placeholder="点击设置" name='request' value='{{myCourseInfo.request}}'></input>
+        </view>
+      </view>
+
+      <view class="row-con">
+        <image src="/img/detail/exam.png" class="icon"></image>
+        <view>
+          <view class="head">考试安排</view>
+          <input class="con" placeholder="点击设置" name='examin' value='{{myCourseInfo.examin}}'></input>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <button form-type='submit' class="submit">保存修改</button>
+</form>
+<view class="btn_end">
+  <button class="end" bindtap='endingCourse'>结束班课</button>
+  <text>班课结束后将无法发布资源、活动等，但仍可以查看已发布的资源和活动</text>
+</view>

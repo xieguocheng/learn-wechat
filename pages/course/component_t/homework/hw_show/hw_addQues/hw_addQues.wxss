@@ -1,0 +1,90 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.head{
+  background: white;
+  padding: 4% 5%;
+  box-shadow: 0 0 10rpx #ddd;
+  margin-bottom: 30rpx;
+}
+.head .trend{
+  float:right;
+  color: #999;
+  font-size: 120%;
+  line-height: 1.6;
+}
+/*
+*form
+*/
+form textarea{
+  background: white;
+  margin-bottom: 30rpx;
+  padding: 5%;
+  width: 90%;
+  box-shadow: 0 0 10rpx #ddd;
+}
+form .answer_area{
+  background: white;
+  padding: 5%;
+  box-shadow: 0 0 10rpx #ddd;
+}
+form .answer_area .ans_row{
+  border-bottom: thin solid #ddd;
+  height:90rpx;
+  margin-bottom: 1%;
+  line-height: 90rpx;
+}
+form .answer_area .ans_row:last-child{
+  margin-bottom: 5%;
+}
+form .answer_area .ans_row .item{
+  width: 20%;
+  height: 90rpx;
+  display: inline-block;
+ 
+}
+form .answer_area .ans_row input{
+  display: inline-block;
+   
+  width: 70%;
+  
+  height:90rpx;
+  line-height: 90rpx;
+  vertical-align: top; 
+}
+form button{
+  font-size: 34rpx;
+  color: #666;
+  width: 90%;
+  margin: 30rpx 5%;
+}
+form button.submit{
+  color: white;
+  background: #24dd82;
+
+}
+form button.submit:active{
+  background: #178d52;
+}
+form .add,.del{
+  font-size: 28rpx;
+  
+  color: #666;
+  display: inline-block;
+  vertical-align: top;
+}
+form .del{
+  float: right;
+  color: red;
+}
+form .add:active,.del:active{
+  color: #999;
+}
+.footer{
+  color: #999;
+  width: 90%;
+  margin: 30rpx auto;
+
+}

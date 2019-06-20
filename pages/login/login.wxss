@@ -1,0 +1,79 @@
+page{
+  background: #efefef;
+  color: #666;
+  font-size: 28rpx;
+}
+#block{
+  width: 90rpx;
+  height: 90rpx;
+  background: #76d7b3;
+  position: absolute;
+  top: 0rpx;
+  left: calc(50% - 45rpx);
+  border-radius: 50%;
+  animation: tra 2s;
+  animation-fill-mode: forwards;
+  box-shadow: 0 0 10rpx #ddd;
+  /*76d7b3*/
+}
+#text{
+  font-size: 250%;
+  color: #76d7b3;
+
+  font-weight: normal;
+  display: block;
+  text-align: center;
+  margin-top: 150rpx;
+   animation: lu 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+#img{
+  width: 450rpx;
+  height: 450rpx;
+  position: relative;
+  z-index: 10;
+  left: 165rpx;
+  top: 180rpx;
+  animation: lu 2s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+#login{
+  color: white;
+  background: #76d7b3;
+  border: 0;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 280rpx;
+    animation: lu 3s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+#login:active{
+   background: #559c82;
+}
+@keyframes lu{
+  0%{
+     opacity: 0;
+  }
+  75%{
+     opacity: 0;
+  }
+  100%{
+   opacity: 1;
+  }
+}
+@keyframes tra{
+  0%{
+    top: 0rpx;  
+  }
+  50%{
+    top:calc(40% - 145rpx);
+    transform: scale(1)
+  }
+  100%{
+    top:calc(40% - 145rpx );
+    transform: scale(4.6)
+  }
+}

@@ -1,0 +1,60 @@
+<view class="blockq"> 
+  <view class="headq" catchtap='changeFlag'>
+    <text class="{{currentBlock==0?'pub':'unpub'}}">已发布 ({{totalPublishedTasks}})</text>
+    <text class="{{currentBlock==0?'unpub':'pub'}}">未发布 ({{totalUnpublishTasks}})</text>
+  </view>
+
+  <view class="published" hidden="{{currentBlock==0?false:true}}">
+    <view class="row" wx:for="{{publishedList}}" catchtap='showPHW' data-set="{{index}}" wx:for-index="index">
+      <view class="row-con">
+        <view class="img">
+          <image src="/img/file/link.png"></image>
+        </view>
+        <view class="desc">
+          <view class="title">{{item.title}}</view>
+          <view class="statement">{{item.createTimeStr}}</view>
+        </view>
+        <view class="trend">></view>
+      </view>
+    </view>
+  </view>
+
+  <view class="unpublish" hidden="{{currentBlock==1?false:true}}">
+    <view class="row" wx:for="{{unpublishList}}">
+      <view class="row-con" bindtouchstart="touchS"  bindtouchmove="touchM"  bindtouchend="touchE" data-index="{{index}}" style="{{item.txtStyle}}" catchtap='showHW'>
+        <view class="img">
+          <image src="/img/file/link.png"></image>
+        </view>
+        <view class="desc">
+          <view class="title">{{item.title}}</view>
+          <view class="title transpalte" style="color:white"><text decode="{{true}}">&ensp;</text></view>
+        </view>
+        <button class="pub_btn" bindtap="push">发布</button>
+      </view>
+       <view class="del" data-index="{{index}}" bindtap = "delItem">删除</view>
+    </view>
+  </view>
+    
+
+</view>
+
+<view class="add iconfont icon-zengjia" id="add" bindtap="showDialogBtn"></view>
+
+<view class="null" wx:if="{{publishedList.length == 0}}" hidden="{{currentBlock==0?false:true}}">空空如也</view>
+<view class="null" wx:if="{{unpublishList.length == 0}}" hidden="{{currentBlock==1?false:true}}">空空如也</view>
+<!--弹窗-->
+<form bindsubmit="GetName">
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+<view class="modal-title">新建作业</view>
+<view class="modal-content">
+<view class="modal-input">
+<input placeholder-class="input-holder" type="text" bindinput="inputChange" class="input" value="{{date}}" name="hw_name"></input>
+</view>
+</view>
+<view class="modal-footer">
+<button class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</button>
+<button class="btn-confirm" bindtap="onConfirm" data-status="confirm" form-type='submit'>确定</button>
+</view>
+</view>
+</form>

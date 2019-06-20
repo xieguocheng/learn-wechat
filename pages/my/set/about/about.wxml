@@ -1,0 +1,14 @@
+<view class="block">
+  <image src="/img/about/lu.png"></image>
+  <view class="title">子鹿班课</view>
+  <view class="ver">Version 1.0.0<text>beta</text></view>
+</view>
+<view class="block s">
+  <image src="/img/about/a712.png"></image>
+  <view class="ver">712匠心设计</view>
+</view>
+<view class="block d">
+  <view class="ver" style="padding-bottom:1.5%">惠州学院16级软件工程4班712工作室于2019年联合制作的一个学习平台小程序</view>
+  <view class="ver">A Learning Platform Program Co-produced by 712 Studio, Class 4, Software Engineering, Grade 16, Huizhou University in 2019</view>
+</view>
+<view class="footer">712工作室 版权所有</view>

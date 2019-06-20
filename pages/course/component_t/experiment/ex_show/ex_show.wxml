@@ -1,0 +1,69 @@
+<view class="block">
+  <view class="head-head">
+    <image class="img" src="/img/file/file.png"></image>
+    <view class="desc">
+      <view class="title">{{exList.title}}</view>
+      <view class="score">
+        <text class="exscore">分值：{{exList.score}}</text>
+        <text class="status engagement_t" wx:if="{{exList.status == 1}}">进行中</text>
+        <text class="status engagement_f" wx:if="{{exList.status == 0}}">已截止</text>
+      </view>
+    </view>
+  </view>
+  <view class="head-main">
+    <view class="createTime">发布时间：
+      <text>{{exList.createTimeStr}}</text>
+    </view>
+    <view class="deadLine">截止时间：
+      <text>{{exList.endTimeStr}}</text>
+    </view>
+  </view>
+</view>
+
+<view class="block">
+  <view class="blockTitle">实验描述</view>
+  <view class="experimentDesc">{{exList.detail}}</view>
+</view>
+
+<view class="block">
+  <view class="blockTitle">附件</view>
+  <view class="accessory">
+
+    <view class="arow" wx:for="{{urllist}}" wx:for-index="idx"  data-index='{{idx}}' bindtap='open'>
+      <view class="arow-con">
+        <image class="img" src="/img/file/{{type[idx]}} "></image>
+        <view class="desc">
+          <view class="title wordname">{{item.documentname}}</view>
+        </view>
+      </view>
+
+    </view>
+    <view class="null" hidden="{{exList.fileName.length == 0?false:true}}">空空如也</view>
+  </view>
+</view>
+
+<view class="block">
+  <view class="blockTitle">提交人数({{stuT.length}}/{{stuT.length+stuF.length}})</view>
+
+  <view class="arow" wx:for="{{stuT}}" wx:for-index="idx" catchtap='toStuT' data-index='{{idx}}'>
+    <view class="arow-con">
+      <image class="img" src="{{item.userImg}}"></image>
+      <view class="desc">
+        <view class="title wordname">{{item.username}}</view>
+        <view class="title engagement_t">{{item.upTimeStr}} 提交</view>
+      </view> 
+    </view>
+    
+  </view>
+  <view class="arow" wx:for="{{stuF}}" wx:for-index="idx" catchtap='toStuF' data-index='{{idx}}'>
+    <view class="arow-con">
+      <image class="img" src="{{item.userImg}}"></image>
+      <view class="desc">
+        <view class="title wordname">{{item.username}}</view>
+        <view class="title engagement_f">未提交</view>
+      </view>
+    </view>
+    
+  </view>
+  <view class="null" wx:if="{{stuT.length + stuF.length == 0}}">空空如也</view>
+</view>

@@ -1,0 +1,6 @@
+<view class="head">
+<form bindsubmit='do'>
+  <input placeholder='请输入课程号' name="classnum"></input>
+  <button type="primary" form-type='submit'>加入</button>
+ </form>
+</view>

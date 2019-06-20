@@ -1,0 +1,27 @@
+<form>
+  <view class="block">
+    <radio-group>
+      <label>问题分类</label>
+      <view>
+        <radio>内容意见</radio>
+        <radio>产品建议</radio>
+        <radio>BUG提交</radio>
+        <radio>其他问题</radio>
+      </view>
+
+    </radio-group>
+    <label>问题描述</label>
+    <textarea></textarea>
+  </view>
+  <view class="block">
+    <label>上传凭证</label>
+    <button class="add-img">+</button>
+  </view>
+  <view class="block contact">
+    <label>联系人<text style="color:red">*</text></label>
+    <input></input>
+    <label>联系方式<text style="color:red">*</text></label>
+    <input></input>
+  </view>
+  <button id="submit" catchtap='submitt'>提交</button>
+</form>

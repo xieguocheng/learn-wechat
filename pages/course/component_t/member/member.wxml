@@ -1,0 +1,17 @@
+<view class="blockm"> 
+  <view class="count">成员总数 ({{totalStudents}})</view>
+  <view class="row" wx:for="{{studentList}}" catchtap='toTro' data-id='{{index}}'>
+    <view class="row-con">
+      <view class="img">
+        <image wx:if="{{item.userImg!=null}}" src='{{item.userImg}}'></image>
+        <image wx:if="{{item.userImg==null}}" src="{{studentImg}}"></image>
+      </view>
+      <view class="desc">
+        <view class="name">{{item.username}}</view>
+        <view class="num">{{item.number}}</view>
+      </view>
+      <text class="sign"> <text>></text></text>
+    </view>
+  </view>
+</view>
+<view class="null" wx:if="{{studentList.length == 0}}">空空如也</view>

@@ -1,0 +1,113 @@
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #444;
+  padding-bottom: 30rpx;
+}
+.head{
+  width: 90%;
+  margin: 20rpx auto;
+  background: white;
+  padding-bottom: 30rpx;
+  border-bottom-left-radius:25rpx;
+  border-bottom-right-radius:25rpx;
+  border-radius: 25rpx;
+  overflow: hidden;
+  box-shadow: 0 0 15rpx #ddd;
+}
+.head .head-intro{
+  margin: 40rpx auto;
+  width: 85%;
+}
+.head-intro .head-con{
+  
+}
+.head-intro .head-con .cname{
+  color: #666;
+  font-size: 34rpx;
+  line-height: 2;
+  
+}
+.head-intro .head-con .tname{
+  color: black;
+  font-weight: lighter;
+}
+.head-intro .head-con .join{
+  float: right;
+  color: white;
+  
+  background: #24dd82;
+  padding: 15rpx 35rpx;
+  border-radius: 35rpx;
+  box-shadow: 0 0 10rpx #ddd;
+  margin-top: -60rpx;
+}
+.head-intro .head-con .join:active{
+   background: #178d52;
+}
+.head-intro .head-time{
+   color: black;
+  font-weight: lighter;
+  clear:right;
+  margin-top: 50rpx;
+  font-size: 80%;
+  
+  line-height: 1.6;
+}
+.head-intro .head-time view text:first-child{
+  color: #222;
+  width: 100rpx;
+  
+  display: inline-block;
+  text-align: right;
+  margin-right: 15rpx;
+}
+/*main*/
+.main{
+  width: 90%;
+  margin: 30rpx auto;
+  background: white;
+  padding-bottom: 40rpx;
+  border-bottom-left-radius:25rpx;
+  border-bottom-right-radius:25rpx;
+  border-radius: 25rpx;
+  overflow: hidden;
+  box-shadow: 0 0 15rpx #ddd;
+}
+.main .main-img{
+  margin: 40rpx auto 0;
+  border-radius: 50%;
+
+  width: 150rpx;
+  height: 150rpx;
+}
+.main .main-img image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.main .main-intro{
+  
+  line-height: 1.6;
+}
+.main .main-intro .tname{
+  text-align: center;
+  font-size: 34rpx;
+  color: #666;
+  line-height: 2;
+  border-bottom: thin solid #ddd;
+  width: 90%;
+  margin: auto;
+  padding: 20rpx 0;
+}
+.main .main-intro .tmail,
+.main .main-intro .tdesc
+{
+  width: 80%;
+  margin: 0 auto;  
+  font-weight: lighter;
+  color: black;
+}
+.main .main-intro .tmail{
+  margin: 30rpx auto;
+}

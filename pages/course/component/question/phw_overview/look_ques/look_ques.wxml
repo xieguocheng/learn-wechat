@@ -1,0 +1,65 @@
+<view class="block">
+  <view class="title">答题详情</view>
+  <view class="blockCon">
+    <view class="box">
+      <view class="item" wx:for="{{quesList}}" wx:for-index="index" catchtap='switchQues' data-set="{{index}}">
+        <view class="itemCon t" wx:if="{{item.questionGrade==1}}">
+          <text>{{index+1}}</text>
+        </view>
+        <view class="itemCon f"  wx:if="{{item.questionGrade==0}}">
+          <text>{{index+1}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class="block">
+  <view class="row">
+    <view class="title">{{index*1+1}}. {{type[ques.questionType-1]}}</view>
+    <view class="block-con">
+      <view class="desc">{{ques.questionDesc}}</view>
+      <view class="cho" wx:if="{{ques.question_type!=3}}">
+        <text wx:for="{{ques.choicelist}}" wx:for-index="idx">
+          {{ans_id[idx]}}. {{item}}
+        </text>
+      </view>
+
+      <view class="ans" wx:if="{{ques.questionType!=3}}">
+        <text>正确答案：{{ques.answer[0]}}</text>
+      </view>
+      <view class="ans" wx:if="{{ques.questionType==3}}" wx:for="{{ques.choicelist}}" wx:for-index="idx1">
+        <text>{{blank_id[idx1]}}：{{item}}</text>
+      </view>
+
+    </view>
+
+
+
+    <view class="myans">
+      <view class="mytitle">学生答案：</view>
+      <view class="ans1" wx:if="{{ques.questionType!=3}}">
+        <text>{{ques.useranswer[0]}}</text>
+      </view>
+      <view class="ans1" wx:if="{{ques.questionType==3}}" wx:for="{{ques.useranswer}}" wx:for-index="idx1">
+        <text>{{myBlank_id[idx1]}}：{{item}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+
+<!-- <view class="block">
+  <view class="title">本题得分</view>
+  <view class="con">
+    <view class="t1" hidden="{{ques.grade == 0?true:flase}}">
+          <text>{{ques.grade}}分</text>
+        </view>
+        <view class="f1" hidden="{{ques.grade != 0?true:flase}}">
+          <text>{{ques.grade}}分</text>
+        </view>
+  </view>
+</view> -->

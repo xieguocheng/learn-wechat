@@ -1,0 +1,64 @@
+/* pages/course/component/activity/activity.wxss */
+page{
+  background: #efefef;
+  font-size: 28rpx;
+  color: #666;
+}
+.blocka{
+  background: white;
+  border-bottom: thin solid #ddd;
+  margin-bottom: 130rpx;
+}
+.blocka .heada{
+  border-bottom: thin dashed #efefef;
+  padding:2% 5%;
+}
+.blocka .row{
+  padding:30rpx 5% 0;
+}
+.row:active{
+  background: #efefef;
+}
+.blocka .row .img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: 5rpx;
+}
+.blocka .row .img image{
+  width: 100%;
+  height: 100%;
+}
+.blocka .row .desc{
+  border-bottom: thin solid #efefef;
+  padding-bottom: 30rpx;
+}
+.blocka .row .desc .title{
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 90%;
+}
+.blocka .row:last-child .desc{
+ 
+  border-bottom: 0;
+}
+.blocka .engagement{
+  float: right;
+}
+.blocka .engagement_t{
+  color: green;
+}
+.blocka .engagement_f{
+  color: red;
+}
+.time,
+.statement,
+.engagement{
+  color:#999;
+}
+.tip{
+  padding: 5%;
+  color: #999;
+  margin-top: -150rpx;
+  margin-bottom: 60rpx;
+}
