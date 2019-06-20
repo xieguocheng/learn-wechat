@@ -57,9 +57,9 @@
         <td ><center><img src="https://raw.githubusercontent.com/xieguocheng/learn-wechat/master/picture/16.jpg"  >图2 小程序</center></td>
     </tr>
 </table>
+
 <table>
 	<tr>
-      
         <td ><center><img src="https://raw.githubusercontent.com/xieguocheng/learn-wechat/master/picture/1.jpg"  >图2 小程序</center></td>
     </tr>
 </table>
